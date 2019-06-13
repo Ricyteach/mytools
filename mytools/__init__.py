@@ -10,7 +10,7 @@ def flatten(iterable):
             yield i
 
 
-def chunk(flat_list, sizes):
+def chunk(flat, sizes):
     """Breaks a list into chunks - sort of the opposite of flatten."""
-    iter_flat = iter(flat_list)
+    iter_flat = iter(flat)
     yield from (list(islice(iter_flat, 0, size)) for size in sizes)
